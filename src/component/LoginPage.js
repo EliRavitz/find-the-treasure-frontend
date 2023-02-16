@@ -17,6 +17,7 @@ function LoginPage(props) {
   const [isclickedForgotPassword, setisclickedForgotPassword] = useState(false)
 
   const navigate = useNavigate()
+  console.log(process.env.NODE_ENV)
   const loginHandler = (e) => {
     e.preventDefault()
     axiosInstance
