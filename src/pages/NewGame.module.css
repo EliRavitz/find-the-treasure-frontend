@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 850px) {
+  .main {
+    flex-direction: column;
+  }
+}

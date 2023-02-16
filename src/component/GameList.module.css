@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid gold;
+  padding: o;
+  background: rgba(255, 217, 0, 0.211);
+  height: 88.9vh;
+  overflow: scroll;
+}
+.main::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.noGames {
+  font-family: 'Merienda', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-top: 4rem;
+}
+
+@media (max-width: 850px) {
+  .main {
+    padding-top: 5rem;
+  }
+}

@@ -1,0 +1,37 @@
+.main_page {
+  padding: 0 15%;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+.text {
+  margin-top: 1rem;
+  border: 1px solid gold;
+  border-radius: 20px;
+  padding: 3rem;
+}
+.main_page h2 {
+  margin-bottom: 1rem;
+}
+
+.main_page p {
+  margin: 1.5rem 0;
+}
+
+.end {
+  color: gold;
+}
+
+@media (max-width: 500px) {
+  .main_page {
+    margin-top: 5rem;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-top: 1px solid gold;
+  }
+  .text {
+    padding: 0;
+    border: none;
+  }
+}

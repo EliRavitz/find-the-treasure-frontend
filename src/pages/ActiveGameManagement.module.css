@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 850px) {
+  .main {
+    flex-direction: column;
+  }
+}

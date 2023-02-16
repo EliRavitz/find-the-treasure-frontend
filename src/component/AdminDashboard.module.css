@@ -1,0 +1,48 @@
+.main_page {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid gold;
+  padding: o;
+  background: rgba(255, 217, 0, 0.211);
+  height: 88.9vh;
+}
+
+.main_page a {
+  padding: 3rem;
+  height: 2rem;
+  width: 8rem;
+  text-align: center;
+  margin: 2rem;
+  margin-top: 6rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background-color: #333;
+  color: gold;
+  text-decoration: none;
+}
+
+.main_page a:hover {
+  color: #333;
+  background-color: gold;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .main_page {
+    height: 100vh;
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .main_page a {
+    margin-bottom: 4rem;
+    width: 20rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .main_page a {
+    margin-bottom: 2rem;
+    width: 10rem;
+  }
+}

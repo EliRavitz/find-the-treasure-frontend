@@ -1,0 +1,11 @@
+.main {
+  background: #939393;
+  padding: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Merienda', cursive;
+}
+
+.main strong {
+  color: rgb(255, 217, 0);
+}

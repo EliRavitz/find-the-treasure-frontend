@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+}
+
+.main_timer {
+  background-color: rgb(128, 128, 128);
+  width: 10rem;
+  height: fit-content;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid gold;
+  text-align: center;
+}
+
+.timer1 {
+  font-size: 3rem;
+}
+.timer2 {
+  font-size: 3rem;
+  color: gold;
+}
+
+.p {
+  margin-left: 1rem;
+  max-width: 25rem;
+}

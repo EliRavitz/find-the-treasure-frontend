@@ -1,0 +1,206 @@
+.main_page {
+  background-image: url('../img/Globe\ of\ the\ world\ in\ treasure\ map\ .png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  animation: move-map 8s linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.329);
+  z-index: -1;
+}
+
+@keyframes move-map {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+.pin1 {
+  background-image: url('../img/location1.png');
+  left: 80%;
+  animation: move-pin1 1s ease-in-out;
+  animation-delay: 7s;
+}
+@keyframes move-pin1 {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 35%;
+  }
+}
+.pin2 {
+  background-image: url('../img/location2.png');
+  animation: move-pin2 1s ease-in-out;
+  left: 60%;
+  animation-delay: 7.1s;
+}
+
+@keyframes move-pin2 {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 20%;
+  }
+}
+.pin3 {
+  background-image: url('../img/location3.png');
+  animation: move-pin3 1s ease-in-out;
+  left: 90%;
+  animation-delay: 7.2s;
+}
+
+@keyframes move-pin3 {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 70%;
+  }
+}
+.pin4 {
+  background-image: url('../img/location4.png');
+  animation: move-pin4 1s ease-in-out;
+  left: 55%;
+  animation-delay: 7.3s;
+}
+
+@keyframes move-pin4 {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 74%;
+  }
+}
+.pin5 {
+  background-image: url('../img/location5.png');
+  animation: move-pin5 1s ease-in-out;
+  left: 90%;
+  animation-delay: 7.4s;
+}
+
+@keyframes move-pin5 {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 25%;
+  }
+}
+.pin6 {
+  background-image: url('../img/location6.png');
+  animation: move-pin6 1s ease-in-out;
+  left: 65%;
+  animation-delay: 7.5s;
+}
+
+@keyframes move-pin6 {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 55%;
+  }
+}
+.pin7 {
+  background-image: url('../img/location7.png');
+  animation: move-pin7 1s ease-in-out;
+  left: 77%;
+  animation-delay: 7.6s;
+}
+
+@keyframes move-pin7 {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 60%;
+  }
+}
+
+.pin {
+  position: absolute;
+  width: 3rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  top: -130px;
+}
+
+.middle {
+  color: #f4f4f4;
+  font-family: 'Merienda', cursive;
+  margin: 2rem;
+}
+
+.middle > div {
+  width: 55%;
+}
+
+.middle > h2 {
+  margin: 4rem 0;
+  /* height: 30vh; */
+  font-size: 2rem;
+  font-weight: 700;
+}
+.middle > h2 > strong {
+  color: #07008e;
+}
+
+.middle > div {
+  padding-top: 4rem;
+  border-top: 1px solid #07008e;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.button {
+  margin-top: 2rem;
+}
+
+.button > button {
+  margin: 0 0.5rem;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: 'Merienda', cursive;
+  font-weight: 700;
+}
+.button > button:hover {
+  color: #f4f4f4;
+  background-color: #07008e;
+  cursor: pointer;
+}
+
+.img {
+  max-width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 850px) {
+  .button > button {
+    margin-bottom: 1rem;
+    width: 10rem;
+    font-size: 1.5rem;
+  }
+}

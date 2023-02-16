@@ -1,0 +1,14 @@
+.leaflet_container {
+  width: 60vw;
+  height: 100vh;
+  flex-shrink: 1;
+  z-index: 1;
+  border-right: gold solid 1px;
+}
+
+@media (max-width: 850px) {
+  .leaflet_container {
+    width: 100vw;
+    height: 40vh;
+  }
+}

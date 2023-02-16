@@ -1,0 +1,73 @@
+.main {
+  width: 95%;
+  max-height: 68vh;
+  overflow: scroll;
+  margin: auto;
+}
+.main::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.main_title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.title1 {
+  width: 5rem;
+}
+.title1 p,
+.title2 p {
+  width: 4rem;
+  margin: auto;
+  border-bottom: 1px solid gold;
+  font-family: 'Merienda', cursive;
+}
+
+.title2 {
+  width: 24vw;
+}
+
+.title2 p {
+  width: 10rem;
+}
+
+.ul {
+  padding: 0 0.5rem;
+}
+
+.li {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  width: 5rem;
+  border-bottom: 1px solid gold;
+}
+
+.img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.p {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 5rem;
+  word-break: break-all;
+}

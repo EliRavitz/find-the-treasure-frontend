@@ -1,0 +1,98 @@
+.main {
+  background-color: #fff;
+  flex-shrink: 0;
+  width: 40vw;
+  padding-top: 1rem;
+}
+
+.main_1 {
+  border-bottom: 1px solid gold;
+  width: 25vw;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  height: 14vh;
+}
+
+.input_game_name {
+  font-family: 'Merienda', cursive;
+  color: gold;
+  background: #333;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.3rem;
+  padding: 3px;
+  width: 100%;
+  text-align: center;
+}
+
+.input_search {
+  font-family: 'Merienda', cursive;
+  color: gold;
+  background: #333;
+  border-radius: 8px;
+  border: none;
+  width: 90%;
+  font-size: 1.3rem;
+  padding: 3px;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.input_game_name::placeholder,
+.input_search::placeholder {
+  color: gold;
+}
+
+.form button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.list {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.list_btn {
+  margin-bottom: 1rem;
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: gold;
+  font-family: 'Merienda', cursive;
+}
+.list_btn:hover {
+  color: #333;
+  background-color: gold;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .main {
+    width: 100%;
+  }
+  .main_1 {
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+  }
+  .input_game_name {
+    width: 15rem;
+  }
+
+  .input_search {
+    width: 25rem;
+  }
+}
+@media (max-width: 850px) {
+  .input_game_name {
+    width: 13rem;
+  }
+
+  .input_search {
+    width: 18rem;
+  }
+}

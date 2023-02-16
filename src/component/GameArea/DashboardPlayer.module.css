@@ -1,0 +1,27 @@
+.main_dashboard {
+  width: 50vw;
+  background-color: #f4f4f4;
+}
+
+.character {
+  margin: 1rem auto;
+  width: 7rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  border: 1px solid gold;
+  background-color: #f4f4f4;
+}
+
+.userPhoto {
+  width: 5rem;
+  border: #333 solid 1px;
+  height: 5rem;
+  border: none;
+}
+
+@media (max-width: 850px) {
+  .main_dashboard {
+    width: 100%;
+  }
+}

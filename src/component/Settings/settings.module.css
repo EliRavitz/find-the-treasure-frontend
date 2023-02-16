@@ -1,0 +1,65 @@
+.main {
+  color: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  padding-top: 4rem;
+  font-size: 1.2rem;
+  border-top: 1px solid gold;
+}
+
+.main input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.main input[type='button'] {
+  background-color: gold;
+  color: black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.main input[type='button']:hover {
+  background-color: rgb(253, 231, 110);
+}
+.main input[value='Delete User'] {
+  background-color: rgb(255, 0, 0);
+  width: 30rem;
+}
+.main input[value='Delete User']:hover {
+  background-color: rgb(251, 90, 90);
+}
+
+@media (max-width: 850px) {
+  .main {
+    width: 20rem;
+    margin: auto;
+    padding-top: 4rem;
+    font-size: 2rem;
+    border: none;
+  }
+  .main input,
+  .main input[type='button'] {
+    font-size: 2rem;
+  }
+  .main input[value='Delete User'] {
+    width: 15rem;
+  }
+}
+@media (max-width: 500px) {
+  .main {
+    margin-top: 5rem;
+  }
+}

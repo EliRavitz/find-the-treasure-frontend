@@ -1,0 +1,36 @@
+.main {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.main button {
+  border: none;
+  border-radius: 5px;
+  padding: 0 3px;
+  background-color: gold;
+}
+
+.navbar_menu {
+  background-color: rgba(0, 0, 0, 0.885);
+  font-family: 'Merienda One', cursive;
+  text-align: center;
+  padding: 8px;
+  position: absolute;
+  border-radius: 5px;
+  right: 0;
+  width: 12rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.navbar_menu button {
+  text-align: end;
+}
+
+.navbar_menu a {
+  display: block;
+  color: gold;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
