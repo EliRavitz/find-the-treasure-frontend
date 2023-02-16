@@ -27,7 +27,7 @@ function GetPlayerLocation(props) {
       }
     )
   }, [navigator.geolocation])
-  console.log(process.env.REACT_APP_API_URL_PROD)
+
   // Receives the user's photo and if there is none, then inserts a general photo
   let locationLayer = ''
   useEffect(() => {
@@ -41,7 +41,6 @@ function GetPlayerLocation(props) {
           iconAnchor: [40, 45],
           popupAnchor: [-5, -45],
           iconSize: [55, 55],
-          crossorigin: 'anonymous',
         })
       )
     } else {

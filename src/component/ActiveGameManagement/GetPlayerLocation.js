@@ -14,7 +14,6 @@ function GetPlayerLocation() {
       iconAnchor: [40, 45],
       popupAnchor: [-5, -45],
       iconSize: [55, 55],
-      crossorigin: 'anonymous',
     })
   }
 

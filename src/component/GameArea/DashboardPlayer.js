@@ -22,7 +22,6 @@ function DashboardPlayer() {
         {player.photo && (
           <img
             className={classes.userPhoto}
-            crossorigin="anonymous"
             src={
               process.env.NODE_ENV === 'production'
                 ? `${process.env.REACT_APP_API_URL_PROD}/api/v1/players/photo/${player.photo}`
