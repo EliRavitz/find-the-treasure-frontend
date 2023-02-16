@@ -20,7 +20,7 @@ function App() {
   const [clickeBtnLogin, setClickeBtnLogin] = useState(false)
   const [clickeBtnSingin, setClickeBtnSignin] = useState(false)
   const [blackCBG, setBlackCBG] = useState(false)
-
+  console.log(process.env.REACT_APP_API_URL_PROD)
   const clickLoginHandler = () => {
     setClickeBtnLogin(!clickeBtnLogin)
     setBlackCBG(!blackCBG)
