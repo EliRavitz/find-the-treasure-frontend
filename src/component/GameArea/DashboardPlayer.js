@@ -22,16 +22,17 @@ function DashboardPlayer() {
         {player.photo && (
           <img
             className={classes.userPhoto}
+            crossorigin="anonymous"
             src={
               'https://find-the-treasure-backend.herokuapp.com/api/v1/players/photo/user-eli1-1676553375433.jpeg'
             }
-            // src={
-            //   process.env.NODE_ENV === 'production'
-            //     ? `${process.env.REACT_APP_API_URL_PROD}/api/v1/players/photo/${player.photo}`
-            //     : `/api/v1/players/photo/${player.photo}`
-            // }
             alt="Player Image"
           />
+          // src={
+          //   process.env.NODE_ENV === 'production'
+          //     ? `${process.env.REACT_APP_API_URL_PROD}/api/v1/players/photo/${player.photo}`
+          //     : `/api/v1/players/photo/${player.photo}`
+          // }
         )}
         <div>Hello {userName}</div>
       </div>
