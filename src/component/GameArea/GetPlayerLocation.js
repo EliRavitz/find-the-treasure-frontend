@@ -27,7 +27,7 @@ function GetPlayerLocation(props) {
       }
     )
   }, [navigator.geolocation])
-
+  console.log(process.env.REACT_APP_API_URL_PROD)
   // Receives the user's photo and if there is none, then inserts a general photo
   let locationLayer = ''
   useEffect(() => {
