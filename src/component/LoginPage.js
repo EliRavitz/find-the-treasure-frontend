@@ -25,7 +25,6 @@ function LoginPage(props) {
         password: enteredPIN,
       })
       .then(function (response) {
-        console.log(response)
         props.isClicked()
         dispatch(currentUserActions.replaceUser(response.data.data.user))
         navigate('/admin-dashboard')

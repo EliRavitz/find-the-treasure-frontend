@@ -34,7 +34,10 @@ function GetPlayerLocation(props) {
     if (player.photo) {
       setCurentIcon(
         L.icon({
-          iconUrl: `/api/v1/players/photo/${player.photo}`,
+          iconUrl:
+            process.env.NODE_ENV === 'production'
+              ? `${process.env.REACT_APP_API_URL_PROD}/api/v1/players/photo/${player.photo}`
+              : `/api/v1/players/photo/${player.photo}`,
           iconAnchor: [40, 45],
           popupAnchor: [-5, -45],
           iconSize: [55, 55],

@@ -7,7 +7,10 @@ import L from 'leaflet'
 function GetPlayerLocation() {
   const selectImg = (photo) => {
     return L.icon({
-      iconUrl: `/api/v1/players/photo/${photo}`,
+      iconUrl:
+        process.env.NODE_ENV === 'production'
+          ? `${process.env.REACT_APP_API_URL_PROD}/api/v1/players/photo/${photo}`
+          : `/api/v1/players/photo/${photo}`,
       iconAnchor: [40, 45],
       popupAnchor: [-5, -45],
       iconSize: [55, 55],

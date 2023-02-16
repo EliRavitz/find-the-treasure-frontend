@@ -24,7 +24,11 @@ function PlayersList() {
               <div className={classes.img}>
                 <img
                   className={classes.img}
-                  src={`/api/v1/players/photo/${player.photo}`}
+                  src={
+                    process.env.NODE_ENV === 'production'
+                      ? `${process.env.REACT_APP_API_URL_PROD}/api/v1/players/photo/${player.photo}`
+                      : `/api/v1/players/photo/${player.photo}`
+                  }
                   alt="Player Image"
                 />
               </div>

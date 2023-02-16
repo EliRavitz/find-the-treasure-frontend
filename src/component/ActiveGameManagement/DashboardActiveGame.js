@@ -107,7 +107,9 @@ function DashboardActiveGame() {
             <a
               onClick={() =>
                 navigator.clipboard.writeText(
-                  `https://spectacular-biscuit-69b07d.netlify.app/player-login/${params.gameId}`
+                  process.env.NODE_ENV === 'production'
+                    ? `${process.env.REACT_APP_DOMAIN}/player-login/${params.gameId}`
+                    : `http://localhost:3000/player-login/${params.gameId}`
                 )
               }
               className={classes.btn_send_link}
@@ -115,9 +117,11 @@ function DashboardActiveGame() {
               <span className="material-symbols-outlined ">content_copy</span>
             </a>
 
-            <div
-              className={classes.link_link}
-            >{`https://spectacular-biscuit-69b07d.netlify.app/player-login/${params.gameId}`}</div>
+            <div className={classes.link_link}>
+              {process.env.NODE_ENV === 'production'
+                ? `${process.env.REACT_APP_DOMAIN}/player-login/${params.gameId}`
+                : `http://localhost:3000/player-login/${params.gameId}`}
+            </div>
           </div>
 
           <div className={classes.btn_area}>
