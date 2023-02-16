@@ -23,7 +23,7 @@ function DashboardPlayer() {
           <img
             className={classes.userPhoto}
             src={
-              'find-the-treasure-backend.herokuapp.com/api/v1/players/photo/user-eli1-1676553375433.jpeg'
+              'https://find-the-treasure-backend.herokuapp.com/api/v1/players/photo/user-eli1-1676553375433.jpeg'
             }
             // src={
             //   process.env.NODE_ENV === 'production'
