@@ -30,6 +30,7 @@ function PlayersList() {
                       : `/api/v1/players/photo/${player.photo}`
                   }
                   alt="Player Image"
+                  crossorigin="anonymous"
                 />
               </div>
               <p className={classes.p}>{player.userName}</p>
