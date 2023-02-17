@@ -4,6 +4,7 @@ import axiosInstance from '../../axios'
 import UserNavigation from '../layout/UserNavigation'
 import UserNavigationMobile from '../layout/UserNavigationMobile'
 import ErrorPopup from '../../component/layout/ErrorPopup'
+import DeleteUser from './DeleteUser'
 
 import classes from './settings.module.css'
 
@@ -12,6 +13,7 @@ function Settings() {
   const [message1, setMessage1] = useState('')
   const [message2, setMessage2] = useState('')
   const [isGood, setIsGood] = useState(false)
+  const [isClickedYesDelete, setIsClickedYesDelete] = useState(false)
 
   const formReducer = (state, action) => {
     switch (action.type) {
@@ -119,6 +121,9 @@ function Settings() {
     setClickedChangePassword(!ClickedChangePassword)
   }
 
+  const isClickedYesDeleteUser = () => {
+    setIsClickedYesDelete(!isClickedYesDelete)
+  }
   return (
     <>
       {message1 && (
@@ -191,7 +196,14 @@ function Settings() {
           {ClickedChangePassword && <br />}
           <input type="button" value="Save" onClick={isClickedSave} />
         </form>
-        <input type="button" value="Delete User" />
+        <input
+          type="button"
+          value="Delete User"
+          onClick={isClickedYesDeleteUser}
+        />
+        {isClickedYesDelete && (
+          <DeleteUser isClickedYes={isClickedYesDeleteUser} />
+        )}
         <br />
       </div>
     </>
