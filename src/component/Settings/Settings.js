@@ -1,10 +1,12 @@
-import { useState, useReducer } from 'react'
+import { useState, useReducer, useEffect } from 'react'
+import { Navigate } from 'react-router-dom'
 import axiosInstance from '../../axios'
 
 import UserNavigation from '../layout/UserNavigation'
 import UserNavigationMobile from '../layout/UserNavigationMobile'
-import ErrorPopup from '../../component/layout/ErrorPopup'
 import DeleteUser from './DeleteUser'
+import PopUpGeneral from '../layout/PopUpGeneral'
+import ErrorPopup from '../../component/layout/ErrorPopup'
 
 import classes from './settings.module.css'
 
@@ -14,6 +16,8 @@ function Settings() {
   const [message2, setMessage2] = useState('')
   const [isGood, setIsGood] = useState(false)
   const [isClickedYesDelete, setIsClickedYesDelete] = useState(false)
+  const [openPopUp, setOpenPopUp] = useState(false)
+  const [thereIsError, setThereIsError] = useState(false)
 
   const formReducer = (state, action) => {
     switch (action.type) {
@@ -121,13 +125,44 @@ function Settings() {
     setClickedChangePassword(!ClickedChangePassword)
   }
 
-  const isClickedYesDeleteUser = () => {
-    setIsClickedYesDelete(!isClickedYesDelete)
+  const isClickedDeleteUser = () => {
+    setOpenPopUp(!openPopUp)
   }
+
+  const popUphHandlerNo = () => {
+    setOpenPopUp(!openPopUp)
+  }
+  const popUphHandlerYes = () => {
+    setIsClickedYesDelete(!isClickedYesDelete)
+    setOpenPopUp(!openPopUp)
+  }
+
+  let timeoutId = null
+
+  const deleteError = (err) => {
+    setThereIsError(true)
+    setMessage1(err.message)
+    setMessage2(err.response.data.message)
+    timeoutId = setTimeout(() => {
+      setThereIsError(false)
+    }, 7000)
+    return () => clearTimeout(timeoutId)
+  }
+
   return (
     <>
       {message1 && (
         <ErrorPopup title={message1} message={message2} isGood={isGood} />
+      )}
+      {thereIsError && <ErrorPopup title={message1} message={message2} />}
+      {openPopUp && (
+        <PopUpGeneral
+          PopUphHandlerNo={popUphHandlerNo}
+          PopUphHandlerYes={popUphHandlerYes}
+          message={
+            'Are you sure you want to delete the account including all games and players linked to it?'
+          }
+        />
       )}
       {window.innerWidth < 500 ? <UserNavigationMobile /> : <UserNavigation />}
       <div className={classes.main}>
@@ -157,7 +192,9 @@ function Settings() {
             />
           )}
           {!ClickedChangePassword && <br />}
-          {ClickedChangePassword && <label htmlFor="password">password:</label>}
+          {ClickedChangePassword && (
+            <label htmlFor="password">current password:</label>
+          )}
           {ClickedChangePassword && (
             <input
               type="password"
@@ -199,11 +236,16 @@ function Settings() {
         <input
           type="button"
           value="Delete User"
-          onClick={isClickedYesDeleteUser}
+          onClick={isClickedDeleteUser}
         />
         {isClickedYesDelete && (
-          <DeleteUser isClickedYes={isClickedYesDeleteUser} />
+          <DeleteUser
+            isClickedYes={popUphHandlerYes}
+            setThereIsError={setThereIsError}
+            deleteError={deleteError}
+          />
         )}
+        {isClickedYesDelete && <Navigate to="/" replace={true} />}
         <br />
       </div>
     </>

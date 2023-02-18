@@ -6,16 +6,11 @@ function DeleteUser(props) {
       active: false,
     })
     .then(function (response) {
-      props.isClickedYes
+      props.isClickedYes()
     })
     .catch(function (error) {
-      console.log(error)
-      //   setError(error)
-      //   timeoutId = setTimeout(() => {
-      //     setError('')
-      //   }, 7000)
+      props.deleteError(error)
     })
-  //   return () => clearTimeout(timeoutId)
 }
 
 export default DeleteUser
