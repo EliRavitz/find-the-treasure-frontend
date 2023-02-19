@@ -82,11 +82,9 @@ function PlayerLogin() {
         },
       })
       .then(function (response) {
-        console.log(response)
         setIdUser(response.data.data.data._id)
       })
       .catch(function (error) {
-        console.log(error)
         setError(error)
         timeoutId = setTimeout(() => {
           setError('')
