@@ -11,6 +11,7 @@ import classes from './GameList.module.css'
 
 function GameList() {
   const [ListGames, setListGames] = useState([])
+  const [receivedResponse, setReceivedResponse] = useState(false)
   const [error, setError] = useState('')
   const params = useParams()
 
@@ -36,6 +37,8 @@ function GameList() {
         const response2 = await axiosInstance.get(
           `/api/v1/games/${games[i]._id}`
         )
+
+        setReceivedResponse(true)
         setListGames((ListGames) => [...ListGames, response2.data.data.data])
       }
     } catch (error) {
@@ -68,7 +71,13 @@ function GameList() {
       )}
       {window.innerWidth < 500 ? <UserNavigationMobile /> : <UserNavigation />}
       <div className={classes.main}>
-        {!ListGames[0] && (
+        {!receivedResponse && (
+          <iframe
+            src="https://embed.lottiefiles.com/animation/76799"
+            className={classes.spiner}
+          ></iframe>
+        )}
+        {!ListGames[0] && receivedResponse && (
           <div className={classes.noGames}>
             You haven't created any games yet
           </div>
