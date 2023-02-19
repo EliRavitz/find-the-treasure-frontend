@@ -75,6 +75,7 @@ function PlayerLogin() {
     formData.append('gameId', params.gameId)
 
     let timeoutId = null
+    let timeoutId2 = null
     axiosInstance
       .post('/api/v1/players', formData, {
         headers: {
@@ -82,7 +83,9 @@ function PlayerLogin() {
         },
       })
       .then(function (response) {
-        setIdUser(response.data.data.data._id)
+        timeoutId2 = setTimeout(() => {
+          setIdUser(response.data.data.data._id)
+        }, 1500)
       })
       .catch(function (error) {
         setError(error)
@@ -90,7 +93,10 @@ function PlayerLogin() {
           setError('')
         }, 7000)
       })
-    return () => clearTimeout(timeoutId)
+    return () => {
+      clearTimeout(timeoutId)
+      clearTimeout(timeoutId2)
+    }
   }
 
   return (
