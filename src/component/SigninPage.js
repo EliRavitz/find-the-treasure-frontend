@@ -26,10 +26,12 @@ function LoginPage(props) {
         passwordConfirm: enteredPINConfirm,
       })
       .then(function (response) {
+        console.log(response)
         props.isClicked()
         navigate('/admin-dashboard')
       })
       .catch(function (error) {
+        console.log(error)
         dispatch(
           errorInfoAction.update([error.message, error.response.data.message])
         )
