@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const baseURL =
   process.env.NODE_ENV === 'production'
-    ? 'https://lazy-erin-cormorant-sari.cyclic.app'
+    ? 'https://azure-squid-yoke.cyclic.app'
     : ''
 // const baseURL =
 //   process.env.NODE_ENV === 'production'
