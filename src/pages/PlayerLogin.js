@@ -113,6 +113,7 @@ function PlayerLogin() {
             ref={userNameRef}
             onChange={userNameChecker}
             className={classes.userName}
+            maxLength={20}
           />
 
           <div className={classes.image_area}>

@@ -1,12 +1,13 @@
 .main {
   font-family: 'Merienda', cursive;
   text-align: center;
+  width: 45vw;
 }
 
 .linkArea {
   height: 28vh;
-  margin: 0.5rem;
   display: inline-block;
+  padding-bottom: 0.6rem;
 }
 
 .linkArea > div {
@@ -81,8 +82,13 @@
 }
 
 @media (max-width: 850px) {
+  .main {
+    width: 100vw;
+    height: 70vh;
+  }
   .linkArea {
     height: 5rem;
+    width: 100vw;
   }
   .link {
     width: 25rem;
