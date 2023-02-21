@@ -40,6 +40,8 @@ function LoginPage(props) {
     setEnteredPIN('')
   }
 
+  console.log(enteredEmail)
+  console.log(enteredPIN)
   const userNameHandler = (e) => {
     setEnteredEmail(e.target.value)
   }
