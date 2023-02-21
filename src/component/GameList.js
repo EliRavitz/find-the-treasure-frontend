@@ -38,9 +38,9 @@ function GameList() {
           `/api/v1/games/${games[i]._id}`
         )
 
-        setReceivedResponse(true)
         setListGames((ListGames) => [...ListGames, response2.data.data.data])
       }
+      setReceivedResponse(true)
     } catch (error) {
       console.log(error)
       setError(error)
