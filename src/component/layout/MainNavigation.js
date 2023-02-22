@@ -9,7 +9,11 @@ function MainNavigation(props) {
   const [clicedGo, setClicedGo] = useState(false)
 
   const isClickedGo = () => {
-    setClicedGo(!clicedGo)
+    const timeId = setClicedGo(!clicedGo)
+    setTimeout(() => {
+      setClicedGo(!clicedGo)
+    }, 1000)
+    return () => clearTimeout(timeId)
   }
 
   return (

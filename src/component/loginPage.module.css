@@ -11,6 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  width: 17rem;
 }
 
 .main input[type='text'],
@@ -60,4 +61,17 @@
 
 .email_forgot_password {
   align-self: flex-start;
+}
+@media (max-width: 850px) {
+  .main {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+
+  .main input[type='text'],
+  .main input[type='password'],
+  .main input[type='submit'],
+  .main input[type='button'] {
+    font-size: 1.5rem;
+  }
 }

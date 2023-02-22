@@ -8,6 +8,7 @@
 .main button {
   border: none;
   border-radius: 5px;
+
   padding: 0 3px;
   background-color: gold;
 }

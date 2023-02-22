@@ -47,14 +47,12 @@ function HomePage(props) {
             />
           )}
           <div className={classes.middle}>
-            <h2>
-              Welcome to the <strong>find the treasure</strong> game!!!
-            </h2>
+            <h2>Welcome to the find the treasure game!!!</h2>
             <div>
               <p>
-                If this is your first time here, we recommend that you read the
-                game instructions after Sign in. If you have already played here
-                then welcome back and let's play!
+                <strong>If this is your </strong>first time here, we recommend
+                that you read the game instructions after Sign in. If you have
+                already played here then welcome back and let's play!
               </p>
               <div className={classes.button}>
                 <button onClick={props.isClickedLogin}>Log in</button>
