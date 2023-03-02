@@ -1,11 +1,15 @@
 .main {
   height: 5rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10%;
-  background-color: rgba(254, 254, 254, 0.472);
+
+  background-color: rgb(254, 254, 254);
+  border-bottom: 1px solid gold;
   font-family: 'Merienda One', cursive;
+  position: fixed;
+  z-index: 5;
 }
 
 .main ul {
@@ -14,6 +18,7 @@
   padding: 0;
   display: flex;
   text-decoration: none;
+  margin: 0 10vw;
 }
 .main li {
   margin-left: 3rem;
