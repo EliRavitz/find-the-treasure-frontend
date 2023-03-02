@@ -42,7 +42,10 @@ function DashboardActiveGame() {
 
   const handlerYesEndGame = () => {
     setEndGame(!EndGame)
-    // window.location.reload()
+  }
+
+  const temp = () => {
+    window.location.reload()
   }
 
   useEffect(() => {
@@ -87,9 +90,7 @@ function DashboardActiveGame() {
             PopUphHandlerNo={clickEndGameHandler}
           />
         )}
-        {EndGame && (
-          <EndGameUpdate done={handlerYesEndGame} done2={clickEndGameHandler} />
-        )}
+        {EndGame && <EndGameUpdate done={temp} done2={clickEndGameHandler} />}
         <div className={classes.linkArea}>
           <div className={classes.linkSentence}>
             Link to the game. Please send it to the players:
