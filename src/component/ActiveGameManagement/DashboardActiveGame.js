@@ -42,7 +42,8 @@ function DashboardActiveGame() {
 
   const handlerYesEndGame = () => {
     setEndGame(!EndGame)
-    // window.location.reload()
+
+    console.log('ddd')
   }
 
   useEffect(() => {
