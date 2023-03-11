@@ -112,7 +112,7 @@ function LoginPage(props) {
         />
       )}
       {isclickedForgotPassword && (
-        <input onClick={sendEmail} type="button" value="send" />
+        <input onClick={sendEmail} type="button" value="Send" />
       )}
       {isclickedForgotPassword && (
         <input type="button" value="Cancel" onClick={forgotPassword} />
