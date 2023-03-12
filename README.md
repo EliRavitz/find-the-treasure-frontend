@@ -13,7 +13,7 @@ please do not change it, but you can set up as many additional games as you want
 **Good to know:**
 
 Some technical drilldown
-1. We used Leaflet for geo location and map.
+1. I used Leaflet for geo location and map.
 Their technology calculate location by GPS and your IP address - in case GPS signal is not clear enough. 
 As you know, IP address location tends to be not accurate enough, so if you experience any issue with your
 accurate location – it means you’re inside doors or your GPS is not turned on.
@@ -27,6 +27,11 @@ Therefore, in the meantime, to ensure smooth operation, it is recommended to use
 3. Players have the option to upload profile pictures and with the help of an external API the game removes the background of the picture
 so that it does not interfere when it appears on the map.
 In order to avoid unnecessary payments at this stage, a certain inscription remains instead of the background.
+
+4. When you register or click on the "forgot password" button, an email is sent. I prepared to use a third-party provider to send the email like mailgun, 
+but I didn't add it because their registration is long and complex (because of the spam laws they are subject to) 
+and it seems unnecessary for a project intended for display.
+so the email is sent from a regular gmail account.
 
 **About this game:**
 
