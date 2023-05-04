@@ -27,13 +27,13 @@ function HomePage(props) {
       {thereIsError && <ErrorPopup title={error[0]} message={error[1]} />}
       <div className={classes.main_page}>
         <div className={classes.overlay}>
-          <div className={`${classes.pin} ${classes.pin1}`} />
+          {/* <div className={`${classes.pin} ${classes.pin1}`} />
           <div className={`${classes.pin} ${classes.pin2}`} />
           <div className={`${classes.pin} ${classes.pin3}`} />
           <div className={`${classes.pin} ${classes.pin4}`} />
           <div className={`${classes.pin} ${classes.pin5}`} />
           <div className={`${classes.pin} ${classes.pin6}`} />
-          <div className={`${classes.pin} ${classes.pin7}`} />
+          <div className={`${classes.pin} ${classes.pin7}`} /> */}
 
           {window.innerWidth < 500 ? (
             <MainNavigationMobile
